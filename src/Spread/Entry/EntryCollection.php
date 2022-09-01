@@ -28,13 +28,13 @@ class EntryCollection implements \IteratorAggregate
 
     /**
      * @param boolean $duplicateOnGlobal Each timeline action are automatically pushed on Global context
-     * @param integer $batchSize         batch size
+     * @param integer $batchSize batch size
      */
     public function __construct($duplicateOnGlobal = true, $batchSize = 50)
     {
-        $this->coll              = new \ArrayIterator();
+        $this->coll = new \ArrayIterator();
         $this->duplicateOnGlobal = $duplicateOnGlobal;
-        $this->batchSize         = (int) $batchSize;
+        $this->batchSize = (int)$batchSize;
     }
 
     /**
@@ -48,14 +48,14 @@ class EntryCollection implements \IteratorAggregate
     /**
      * @return \ArrayIterator
      */
-    public function getIterator()
+    public function getIterator(): \Traversable
     {
         return $this->coll;
     }
 
     /**
-     * @param EntryInterface $entry   entry you want to push
-     * @param string         $context context where you want to push
+     * @param EntryInterface $entry entry you want to push
+     * @param string $context context where you want to push
      */
     public function add(EntryInterface $entry, $context = 'GLOBAL')
     {
@@ -75,8 +75,8 @@ class EntryCollection implements \IteratorAggregate
      * you can add unaware entries. Component will be created or exception
      * will be thrown if it does not exist
      *
-     * @throws \Exception
      * @return void
+     * @throws \Exception
      */
     public function loadUnawareEntries()
     {

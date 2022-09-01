@@ -4,9 +4,6 @@ namespace Spy\Timeline\ResultBuilder\Pager;
 
 abstract class AbstractPager implements \ArrayAccess
 {
-    /**
-     * @var array
-     */
     protected $pager;
 
     /**

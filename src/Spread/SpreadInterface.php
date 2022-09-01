@@ -14,12 +14,12 @@ interface SpreadInterface
      *
      * @return boolean
      */
-    public function supports(ActionInterface $action);
+    public function supports(ActionInterface $action): bool;
 
     /**
      * @param  ActionInterface $action action we look for spreads
      * @param  EntryCollection $coll   Spreads defined on an EntryCollection
      * @return void
      */
-    public function process(ActionInterface $action, EntryCollection $coll);
+    public function process(ActionInterface $action, EntryCollection $coll): void;
 }
