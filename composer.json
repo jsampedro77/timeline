@@ -11,8 +11,8 @@
     }],
     "require": {
         "php": "^8",
-        "symfony/options-resolver": "^5",
-        "symfony/event-dispatcher": "^5",
+        "symfony/options-resolver": "^5.0|^6.0",
+        "symfony/event-dispatcher": "^5.0|^6.0",
         "doctrine/common": "^3"
     },
     "require-dev": {
